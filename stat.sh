@@ -42,7 +42,7 @@ cat $INPUT | sort -n | awk '
     print "count\t"  count;
     print "min\t"    a[0];
     print "median\t" median;
-    print "mean\t"   sprintf("%.3f",mean);
+    print "mean\t"   mean;
     print "stdev\t"  stdev;
     print "90%\t"    a[int(count*0.90-0.5)];
     print "95%\t"    a[int(count*0.95-0.5)];
