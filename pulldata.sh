@@ -9,6 +9,8 @@ SCRIPT_DIR="$DIR/lftp-scripts"
 
 #lftp -c "open -u USER,PASSWORD -e 'set ssl:verify-certificate false' HOST; mirror --only-newer --include-glob '*.csv' tsloadtime pingboxlv"
 
+cd "$DIR"
+
 for script in $SCRIPT_DIR/*; do
   echo "Pulling $(basename $script)"
   lftp -f "$script"
